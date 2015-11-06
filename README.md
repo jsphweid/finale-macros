@@ -1,3 +1,3 @@
 # finale-macros
 
-Download to .finale-macros in ~ folder...?
+clone / Download to .finale-macros in ~ folder...?
