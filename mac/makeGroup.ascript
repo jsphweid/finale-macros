@@ -1,0 +1,29 @@
+property Helpers : load script POSIX file "helpers.scpt"
+
+-- set theFinale
+tell application id "sevs"
+	try
+		set theFinale to name of first process whose name begins with "Finale"
+	on error number -1719
+		display dialog "Finale doesn't appear to be running."
+		return
+	end try
+end tell
+
+----------------ACTUAL SCRIPT----------------
+
+tell Helpers
+	activate_window(theFinale)
+	menu_click({theFinale, "Tools", "Staff"})
+	delay 0.2
+	menu_click({theFinale, "Staff", "Groups and Brackets", "Add…"})
+	win_wait_active("Group Attributes", theFinale)
+	tell application "System Events"
+		tell process theFinale
+			tell window "Group Attributes"
+				click radio button "All Measures"
+				click button "OK"
+			end tell
+		end tell
+	end tell
+end tell
