@@ -1,0 +1,81 @@
+change sharps to flats 
+change flats to sharps
+
+double note lengths
+halve note lengths
+
+-probably hard-
+paste dynamics only
+
+-probably pretty hard- need to "detect clicks" or assign metatools... possible?
+hidden text expression
+bold text expression
+italic text expression
+tempo marking
+
+DONE - add info to parts
+add info to score
+
+-shouldn't be too hard-
+ALMOST DONE - LA Measure Numbers
+ALMOST DONE - Normal Measure Numbers
+DONE - Big Time Sigs in score
+ALMOST DONE PENDING REPLIES - Big Time Sigs in parts
+ALMOST DONE PENDING REPLIES - Little Time Sigs in parts
+DONE - Little Time Sigs
+
+DONE - show / hide measure numbers on selected staves
+
+finishing touches
+
+STARTED - show/hide rests in empty measures
+
+Print PDFs
+
+Make Part Score
+-update sizing template
+-show measure numbers (necessary?)
+-show rests in empty measures (not sure if possible currently)
+(LOOK ABOVE)make / show big time sigs
+DONE - instrument names uppercase
+DONE - add info to parts
+-add title page template (probably hard to add blank page?)
+-renew parts.. (?)
+-multimeasure rests (how do you actually create them??)
+ALMOST DONE - 4 measures per system (how to save?)
+-prep default look
+
+IS THIS THE SAME AS NORMAL MEASURE WIDTH?  -  Adjust multimeasure Rest width (easy)
+
+Prep Part
+
+Drop System Margins
+Space systems with additional gaps
+-MAKE PLUGIN THAT CAN DO MY LOOK?
+
+DONE - X-Shaped Noteheads (easy)
+DONE - add octave (easy)
+Single Out Voice (TG, not so easy..?)
+DONE Increase Measure Width (easy)
+Explode downwards (hard)
+Implode (easy?)
+
+make group
+delete group
+
+resize page/system/staff in all parts (make 100%)?
+
+DONE - create page breaks everywhere (unnecessary)
+
+
+
+[MINE]print draft
+[MINE]print booklet thing
+
+
+
+
+
+- buttons to do something in finale
+- minimize window upon hitting the button (handle winwaitactive?)
+- find out for real if the pdk is impossible to acquire
