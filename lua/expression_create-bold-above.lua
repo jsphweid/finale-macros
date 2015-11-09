@@ -4,33 +4,30 @@ function plugindef()
     finaleplugin.Date = "July 05, 2015"
     finaleplugin.RequireSelection = false
     finaleplugin.CategoryTags = "create expression"
-    return "Create Expression - Bold Above", "Create Expression - Bold Above", "Create Expression - Bold Above"
+    return "Expression - Create Bold Above", "Expression - Create Bold Above", "Expression - Create Bold Above"
 end
 
 -- Show user dialog box
 local dialog = finenv.UserValueInput()
 dialog.Title = "Create Expression"
 dialog:SetTypes("String")
-dialog:SetDescriptions("Type the expression. Metakey will be ")
+dialog:SetDescriptions("Type the expression. Metakey will be 'a'")
 local userInput = dialog:Execute()
 if not userInput then return end
  
 local expressionText = userInput[1]
+AttachExpression(1,1,1,MakeTextExpression("Any Text Expression Text","Technique Text"))
 
 -- Load through a collection: all items in measure 1
-local expressions = finale.FCExpressions()
-expressions:LoadAllForItem(1)
-for e in each(expressions) do
-    _return_val_ = e:CreateTextExpressionDef(_argument_list_)
-end
+-- local expressions = finale.FCExpressions()
+-- expressions:LoadAllForItem(1)
+-- for e in each(expressions) do
+--     _return_val_ = e:CreateTextExpressionDef(_argument_list_)
+-- end
 
 
 
-
-
-
-
-
+-------------- next part --------------
 function FindTextExpressionCategory(textvalue)
 
 --look for the category with the name textvalue

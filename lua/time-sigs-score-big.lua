@@ -21,9 +21,9 @@ function setFont(fontID, fontName, fontSize, topSymbol, bottomSymbol)
 
 	-- save it back
 	fontPrefs:SetFontInfo(fontInfo)
-   fontPrefs:Save()
+    fontPrefs:Save()
 
-   local distanceprefs = finale.FCDistancePrefs()
+    local distanceprefs = finale.FCDistancePrefs()
 	distanceprefs:Load(1)
 	distanceprefs.TimeSigTopVertical = topSymbol
 	distanceprefs.TimeSigBottomVertical = bottomSymbol 

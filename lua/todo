@@ -1,0 +1,52 @@
+Create big macro score to parts converter:
+force my prefs
+delete system dividers
+show measure numbers
+show rests in empty measures
+big time sigs parts and force appear
+make all uppercase
+add info and template
+delete all parts and re-add (easy way of conforming to correct page sizes, but what if someone already has the parts at least somewhat figurefd out)
+multimeasure rests
+4 staves per system
+
+
+
+if (Button11 = 1)
+	{
+		updatePartsTemplate()
+		deleteScoreSystemDividers()
+	}
+	if (Button1 = 1)
+		showMeasureNumbers()
+	if (Button2 = 1)
+		showHideRestsInEmptyMeasures()
+	if (Button3 = 1)
+	{
+		makeBigTimeSignaturesInParts()
+		forceTimeSignaturesToAppear()
+	}
+
+	if (Button4 = 1)
+		makeAllUpperCase()
+	if (Button5 = 1)
+		addInfoToParts()
+	if (Button6 = 1)
+		setTitlePageLayout()
+	if (Button7 = 1)
+	{
+		goToManageParts()
+		SplashTextOn, 400,80,,Re-Generate Parts here for best results.`nScript will continue will you click OK.
+		Sleep, 1500
+		SplashTextOff
+	}
+	if (Button8 = 1)
+		makeMultimeasureRests()
+	if (Button9 = 1)
+		fit4MeasuresOnAllParts()
+	if (Button10 = 1)
+	{
+		WinWaitActive, Finale
+		WinMenuSelectItem, Finale,,Document,Edit Part,Last Viewed Part
+		prepper("allParts",0,0,0)
+	}
