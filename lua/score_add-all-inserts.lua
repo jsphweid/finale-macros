@@ -19,8 +19,9 @@ offset = 0
 
 inserts_everything = {
   {"^font(Times New Roman)^size(26)^nfx(65)^title()", "center", 0, -98, 1, 1},
-  {"^font(Times New Roman)^size(14)^nfx(67)^subtitle()", "center", 0, -276, 1, 1},
-  {"^font(Times New Roman)^size(14)^nfx(67)Estimated Time  =  ^perftime(4)", "center", 0, -340, 1, 1},
+  {"^font(Times New Roman)^size(14)^nfx(67)^subtitle()", "center", 0, -230, 1, 1},
+  {"^font(Times New Roman)^size(12)^nfx(66)Estimated Time  =  ^perftime(4)", "center", 0, -360, 1, 1},
+  {"^font(Times New Roman)^size(12)^nfx(66)Printed on ^date(2) at ^time(0)", "center", 0, -420, 1, 1},
   {"^font(Times New Roman)^size(18)^nfx(65)^partname()", "left", 144, -86, 1, 1},
   {"^font(Times New Roman)^size(18)^nfx(65)^copyright()", "right", -144, -86, 1, 1},
   {"^font(Times New Roman)^size(12)^nfx(65)^composer()", "right", -144, -259, 1, 1},

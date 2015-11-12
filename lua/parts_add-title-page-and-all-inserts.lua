@@ -13,6 +13,7 @@ inserts_titlePage = {
   {"^font(Times New Roman)^size(18)^nfx(65)^partname()", "left", 144, -86, 1, 1},
   {"^font(Times New Roman)^size(18)^nfx(65)^copyright()", "right", -144, -86, 1, 1},
   {"^font(Times New Roman)^size(12)^nfx(65)^composer()", "center", 0, -950, 1, 1},
+  {"^font(Times New Roman)^size(12)^nfx(65)Printed on ^date(2) at ^time(0)", "center", 0, -2000, 1, 1}
 }
 
 offset = 0
@@ -20,6 +21,7 @@ offset = 0
 inserts_everythingElse = {
   {"^font(Times New Roman)^size(26)^nfx(65)^title()", "center", 0, -230, 1, 1},
   {"^font(Times New Roman)^size(11)^nfx(66)^subtitle()", "center", 0, -346, 1, 1},
+  {"^font(Times New Roman)^size(10)^nfx(66)Printed on ^date(2) at ^time(0)", "center", 0, -450, 1, 1},
   {"^font(Times New Roman)^size(18)^nfx(65)^partname()", "left", 144, -86, 1, 1},
   {"^font(Times New Roman)^size(18)^nfx(65)^copyright()", "right", -144, -86, 1, 1},
   {"^font(Times New Roman)^size(12)^nfx(65)^composer()", "right", -144, -461, 1, 1},
@@ -27,6 +29,7 @@ inserts_everythingElse = {
   {"^font(Times New Roman)^size(12)^nfx(65)^title()", "right", -144, -86, 2, 998},
   {"^font(Times New Roman)^size(14)^nfx(65)- ^page(0) -", "center", 0, -86, 2, 998},
   {"^font(Times New Roman)^size(18)^nfx(192)Total Pages  =  ^totpages()", "center", -288, -14, 1, 1}
+
 }
 
 function insertBlankPageIfNone()
