@@ -1,18 +1,12 @@
 #!/bin/bash
 
 if [ -z "${FINALEMACROS_DIR}" ]; then
-	FINALEMACROS_DIR="$Applications/Hotkey Grid.app/Contents/Resources/scripts/finale-macros"
+	FINALEMACROS_DIR="Applications/Hotkey Grid.app/Contents/Resources/scripts/finale-macros"
 fi
 
 if [ ! -d "$FINALEMACROS_DIR" ]; then
 	echo "Hotkey Grid (Joseph's version) doesn't exist."
-
-	read -n1 -r -p "Press space to continue..." key
-	if [ "$key" = ' ' ]; then
-    	exit
-	else
-    	exit
-	fi
+	exit
 fi
 
 FINALEMACROSZIPFILE="${FINALEMACROS_DIR}/master.zip"
