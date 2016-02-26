@@ -9,7 +9,7 @@ if [ ! -d "$FINALEMACROS_DIR" ]; then
 	exit
 fi
 
-FINALEMACROSZIPFILE="${FINALEMACROS_DIR}/master.zip"
+FINALEMACROSZIPFILE="${FINALEMACROS_DIR}/finale-macros-master.zip"
 
 echo "downloading current .zip of finale-macros from Github..."
 curl -LOk "https://github.com/jsphweid/finale-macros/archive/master.zip" > "${FINALEMACROSZIPFILE}"
@@ -18,10 +18,10 @@ echo "unzipping archive..."
 unzip -qo "${FINALEMACROSZIPFILE}" -d "${FINALEMACROS_DIR}"
 
 echo "moving files from temp unzipped folder into main folder"
-cp -r "${FINALEMACROS_DIR}/.finale-macros-master/." "${FINALEMACROS_DIR}"
+cp -r "${FINALEMACROS_DIR}/finale-macros-master/." "${FINALEMACROS_DIR}"
 
 echo "removing temp unzipped folder"
-rm -rf "${FINALEMACROS_DIR}/.finale-macros-master"
+rm -rf "${FINALEMACROS_DIR}/finale-macros-master"
 
 echo "removing original downloaded .zip"
 rm -rf "${FINALEMACROSZIPFILE}"
