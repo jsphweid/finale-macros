@@ -1,14 +1,21 @@
 #!/bin/bash
 
 if [ -z "${FINALEMACROS_DIR}" ]; then
-	FINALEMACROS_DIR="$HOME/finale-macros"
+	FINALEMACROS_DIR="$Applications/Hotkey Grid.app/Contents/Resources/scripts/finale-macros"
+fi
+
+if [ ! -d "$FINALEMACROS_DIR" ]; then
+	echo "Hotkey Grid (Joseph's version) doesn't exist."
+
+	read -n1 -r -p "Press space to continue..." key
+	if [ "$key" = ' ' ]; then
+    	exit
+	else
+    	exit
+	fi
 fi
 
 FINALEMACROSZIPFILE="${FINALEMACROS_DIR}/master.zip"
-
-echo "creating directory in home folder..."
-mkdir -p "${FINALEMACROS_DIR}"
-cd "${FINALEMACROS_DIR}"
 
 echo "downloading current .zip of finale-macros from Github..."
 curl -LOk "https://github.com/jsphweid/finale-macros/archive/master.zip" > "${FINALEMACROSZIPFILE}"
