@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ -z "${FINALEMACROS_DIR}" ]; then
+	FINALEMACROS_DIR="$HOME/finale-macros"
+fi
+
+FINALEMACROSZIPFILE="${FINALEMACROS_DIR}/master.zip"
+
+echo "creating directory in home folder..."
+mkdir -p "${FINALEMACROS_DIR}"
+cd "${FINALEMACROS_DIR}"
+
+echo "downloading current .zip of finale-macros from Github..."
+curl -LOk "https://github.com/jsphweid/finale-macros/archive/master.zip" > "${FINALEMACROSZIPFILE}"
+
+echo "unzipping archive..."
+unzip -qo "${FINALEMACROSZIPFILE}" -d "${FINALEMACROS_DIR}"
+
+echo "moving files from temp unzipped folder into main folder"
+cp -r "${FINALEMACROS_DIR}/.finale-macros-master/." "${FINALEMACROS_DIR}"
+
+echo "removing temp unzipped folder"
+rm -rf "${FINALEMACROS_DIR}/.finale-macros-master"
+
+echo "removing original downloaded .zip"
+rm -rf "${FINALEMACROSZIPFILE}"
+
+echo "end"
