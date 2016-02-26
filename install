@@ -9,10 +9,10 @@ if [ ! -d "$FINALEMACROS_DIR" ]; then
 	exit
 fi
 
-FINALEMACROSZIPFILE="${FINALEMACROS_DIR}/finale-macros-master.zip"
+FINALEMACROSZIPFILE="${FINALEMACROS_DIR}/master.zip"
 
 echo "downloading current .zip of finale-macros from Github..."
-curl -LOk "https://github.com/jsphweid/finale-macros/archive/master.zip" > "${FINALEMACROSZIPFILE}"
+cd "$FINALEMACROS_DIR" && curl -LO https://github.com/jsphweid/finale-macros/archive/master.zip
 
 echo "unzipping archive..."
 unzip -qo "${FINALEMACROSZIPFILE}" -d "${FINALEMACROS_DIR}"
