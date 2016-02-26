@@ -15,6 +15,7 @@ function transpose(interval, preserve)
 				local octaveUpCalc = thisNote + interval
 				newNote = entry:AddNewNote()
 				newNote:SetMIDIKey(octaveUpCalc)
+				newNote.CheckAccidentals = true 
 				if (preserve == false) then
 			   		entry:DeleteNote(note)
 			   	end
