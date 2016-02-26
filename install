@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "${FINALEMACROS_DIR}" ]; then
-	FINALEMACROS_DIR="Applications/Hotkey Grid.app/Contents/Resources/scripts/finale-macros"
+	FINALEMACROS_DIR="/Applications/Hotkey Grid.app/Contents/Resources/scripts/finale-macros"
 fi
 
 if [ ! -d "$FINALEMACROS_DIR" ]; then
