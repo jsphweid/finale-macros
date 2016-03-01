@@ -1,0 +1,42 @@
+-- Halve Note Lengths
+-- version 1.0 on 2015-07-09 in Freund's office
+
+-- load helper file
+property Helpers : load script POSIX file "helpers.scpt"
+
+-- set theFinale
+tell application id "sevs"
+	try
+		set theFinale to name of first process whose name begins with "Finale"
+	on error number -1719
+		display dialog "Finale doesn't appear to be running."
+		return
+	end try
+end tell
+
+----------------ACTUAL SCRIPT----------------
+
+tell Helpers
+	display dialog "Which line should be singled out? (enter: 1, 2, 3, etc.)" default answer "1" buttons {"Ok"}
+	set theAnswer to (text returned of result)
+	activate_window(theFinale)
+	delay 0.2
+	--win_wait_active(theFinale, theFinale)
+	menu_click({theFinale, "Plug-ins", "TG Tools", "Process Extracted Parts..."})
+	delay 0.5
+end tell
+
+tell application "System Events"
+	tell process theFinale
+		repeat until exists (1st window whose title contains "Extracted")
+   			delay 0.2
+		end repeat
+	end tell
+	keystroke theAnswer
+	keystroke tab
+	keystroke return
+	delay 0.2
+	key code 53
+end tell
+
+
